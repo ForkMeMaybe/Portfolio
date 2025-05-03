@@ -1,6 +1,3 @@
-# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: Node.js CI
 
 on:
@@ -16,9 +13,11 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+      - name: Checkout Repository 📥
+        uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
@@ -27,9 +26,11 @@ jobs:
       - name: Configure Yarn Cache (optional)
         run: echo "Skipping yarn cache due to issues"
 
+      - name: Install Dependencies 🥁
+        run: yarn install
+        working-directory: forkmemaybe-portfolio
 
-
-      - name: Building 🧱
+      - name: Build Project 🧱
         run: yarn build
         working-directory: forkmemaybe-portfolio
         env:
@@ -38,13 +39,16 @@ jobs:
           NEXT_PUBLIC_TEMPLATE_ID: template_w2hkff3
           NEXT_PUBLIC_USER_ID: nRClxwHPLT_mRBrRW
 
-      - name: Exporting Bundle Files 🎪
+      - name: Export Static Files 🎪
         run: yarn export
         working-directory: forkmemaybe-portfolio
-      - run: touch ./out/.nojekyll
 
-      - name: Deploy to Github-Pages 🚀
+      - name: Ensure .nojekyll is present
+        run: touch forkmemaybe-portfolio/out/.nojekyll
+
+      - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: out # The folder the action should deploy.
+          branch: gh-pages
+          folder: forkmemaybe-portfolio/out
+
