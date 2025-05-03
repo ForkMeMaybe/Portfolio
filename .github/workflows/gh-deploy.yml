@@ -39,11 +39,9 @@ jobs:
 
       - name: Exporting Bundle Files 🎪
         run: yarn export
-        working-directory: forkmemaybe-portfolio
 
       - name: Ensure .nojekyll is present
         run: touch out/.nojekyll
-        working-directory: forkmemaybe-portfolio
 
 
       - name: Deploy to GitHub Pages 🚀
