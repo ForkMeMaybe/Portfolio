@@ -1,48 +1,33 @@
-name: Node.js CI
+name: Deploy Next.js to GitHub Pages
 
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
 
     steps:
       - name: Checkout Repository 📥
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Configure Yarn Cache (optional)
-        run: echo "Skipping yarn cache due to issues"
+          node-version: '16'
 
       - name: Install Dependencies 🥁
         run: yarn install
 
-      - name: Build Project 🧱
-        run: yarn build
-        env:
-          NEXT_PUBLIC_TRACKING_ID: G-8FBXBFXC10
-          NEXT_PUBLIC_SERVICE_ID: service_qikussl
-          NEXT_PUBLIC_TEMPLATE_ID: template_w2hkff3
-          NEXT_PUBLIC_USER_ID: nRClxwHPLT_mRBrRW
+      - name: Clean old builds 🧹
+        run: rm -rf .next out
 
-      - name: Exporting Bundle Files 🎪
-        run: yarn export
-
-      - name: Ensure .nojekyll is present
-        run: touch out/.nojekyll
-
+      - name: Build and Export 📦
+        run: |
+          yarn build
+          yarn export
+          touch out/.nojekyll
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
