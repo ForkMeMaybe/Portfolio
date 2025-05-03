@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: '/forkmemaybe-portfolio',
+  basePath: '/Portfolio',
 };
 
 module.exports = nextConfig;
