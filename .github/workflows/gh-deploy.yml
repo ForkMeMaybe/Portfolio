@@ -31,6 +31,7 @@ jobs:
 
       - name: Building 🧱
         run: yarn build
+        working-directory: forkmemaybe-portfolio
         env:
           NEXT_PUBLIC_TRACKING_ID: G-8FBXBFXC10
           NEXT_PUBLIC_SERVICE_ID: service_qikussl
@@ -39,6 +40,7 @@ jobs:
 
       - name: Exporting Bundle Files 🎪
         run: yarn export
+        working-directory: forkmemaybe-portfolio
       - run: touch ./out/.nojekyll
 
       - name: Deploy to Github-Pages 🚀
