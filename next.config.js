@@ -3,9 +3,10 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {
-    unoptimized: true
+    unoptimized: true,
   },
   basePath: '/Portfolio',
+  assetPrefix: '/Portfolio/', // <-- this is the key!
 };
 
 module.exports = nextConfig;
