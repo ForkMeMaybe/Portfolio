@@ -28,11 +28,9 @@ jobs:
 
       - name: Install Dependencies 🥁
         run: yarn install
-        working-directory: forkmemaybe-portfolio
 
       - name: Build Project 🧱
         run: yarn build
-        working-directory: forkmemaybe-portfolio
         env:
           NEXT_PUBLIC_TRACKING_ID: G-8FBXBFXC10
           NEXT_PUBLIC_SERVICE_ID: service_qikussl
@@ -41,7 +39,6 @@ jobs:
 
       - name: Export Static Files 🎪
         run: yarn export
-        working-directory: forkmemaybe-portfolio
 
       - name: Ensure .nojekyll is present
         run: touch forkmemaybe-portfolio/out/.nojekyll
