@@ -245,7 +245,7 @@ function Projects() {
         {
             name: "Shop-Sphere",
             date: "Jan 2024",
-            link: "https://shop-sphere-frontend.onrender.com/",
+            link: "https://github.com/ForkMeMaybe/Shop-Sphere",
             description: [
                 "E-commerce site using Django REST Framework, PostgreSQL, Redis, React",
             ],
@@ -254,7 +254,7 @@ function Projects() {
         {
             name: "gymzoid",
             date: "Oct 2023",
-            link: "https://forkmemaybe.github.io/gymzoid/",
+            link: "https://github.com/ForkMeMaybe/gymzoid",
             description: [
                 "A responsive static website for a gym, made using HTML, CSS",
             ],
