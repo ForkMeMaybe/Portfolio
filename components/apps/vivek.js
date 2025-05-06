@@ -243,7 +243,7 @@ function Skills() {
 function Projects() {
     const project_list = [
         {
-            name: "Shop Sphere",
+            name: "Shop-Sphere",
             date: "Jan 2024",
             link: "https://shop-sphere-frontend.onrender.com/",
             description: [
@@ -252,7 +252,7 @@ function Projects() {
             domains: ["Django REST Framework", "PostgreSQL", "React"]
         },
         {
-            name: "GymZoid",
+            name: "gymzoid",
             date: "Oct 2023",
             link: "https://forkmemaybe.github.io/gymzoid/",
             description: [
@@ -261,7 +261,7 @@ function Projects() {
             domains: ["HTML", "CSS"]
         },
         {
-            name: "Library Management System",
+            name: "Library-Management-System",
             date: "Sep 2022",
             link: "https://github.com/ForkMeMaybe/Library-Management-System",
             description: [
@@ -311,7 +311,7 @@ function Projects() {
                                 <div className="flex flex-wrap justify-between items-center">
                                     <div className='flex justify-center items-center'>
                                         <div className=" text-base md:text-lg mr-2">{project.name.toLowerCase()}</div>
-                                        <iframe src={`https://ghbtns.com/github-btn.html?user=vivek9patel&repo=${projectName}&type=star&count=true`} frameBorder="0" scrolling="0" width="150" height="20" title={project.name.toLowerCase()+"-star"}></iframe>
+                                        <iframe src={`https://ghbtns.com/github-btn.html?user=ForkMeMaybe&repo=${projectName}&type=star&count=true`} frameBorder="0" scrolling="0" width="150" height="20" title={project.name.toLowerCase()+"-star"}></iframe>
                                     </div>
                                     <div className="text-gray-300 font-light text-sm">{project.date}</div>
                                 </div>
