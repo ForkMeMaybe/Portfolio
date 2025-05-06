@@ -243,6 +243,15 @@ function Skills() {
 function Projects() {
     const project_list = [
         {
+            name: "Dockerized Shop Sphere",
+            date: "Feb 2025",
+            link: "https://github.com/ForkMeMaybe/Dockerized-Shop-Sphere",
+            description: [
+                "Dockerized version of Shop Sphere",
+            ],
+            domains: ["Docker"]
+        },
+        {
             name: "Shop-Sphere",
             date: "Jan 2024",
             link: "https://github.com/ForkMeMaybe/Shop-Sphere",
