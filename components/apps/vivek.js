@@ -150,7 +150,7 @@ function Education() {
                     </div>
                     <div className=" text-sm text-gray-400 mt-0.5">2022 - 2026</div>
                     <div className=" text-sm md:text-base">Computer Science</div>
-                    <div className="text-sm text-gray-300 font-bold mt-1">GPA &nbsp; 7.8</div>
+                    <div className="text-sm text-gray-300 font-bold mt-1">GPA &nbsp; 7.97</div>
                 </li>
                 <li className="list-disc">
                     <div className=" text-lg md:text-xl mt-4 text-left font-bold leading-tight">
