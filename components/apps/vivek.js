@@ -243,6 +243,33 @@ function Skills() {
 function Projects() {
     const project_list = [
         {
+            name: "XKMailer",
+            date: "June 2025",
+            link: "https://github.com/ForkMeMaybe/XKMailer",
+            description: [
+                "A PHP app that sends daily XKCD comics via email to verified users with a secure opt-in and unsubscribe system.",
+            ],
+            domains: ["Cron","PHP", "File Handling", "HTML"]
+        },
+        {
+            name: "Redis Server Clone",
+            date: "On Going",
+            link: "https://github.com/ForkMeMaybe/Redis",
+            description: [
+                "Built a lightweight Redis clone in C++ with core command support, in-memory storage, and TCP-based client-server architecture to explore NoSQL and event-driven systems.",
+            ],
+            domains: ["C++", "Redis", "Sockets", "Client-Server Model"]
+        },
+        {
+            name: "Travify",
+            date: "May 2025",
+            link: "https://travify.onrender.com/",
+            description: [
+                "A Travel Form written in PHP",
+            ],
+            domains: ["PHP", "PostgreSQL", "HTML", "CSS", "JavaScript-"]
+        },
+        {
             name: "Dockerized Shop Sphere",
             date: "Feb 2025",
             link: "https://github.com/ForkMeMaybe/Dockerized-Shop-Sphere",
