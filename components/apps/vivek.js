@@ -263,11 +263,11 @@ function Projects() {
         {
             name: "Travify",
             date: "May 2025",
-            link: "https://travify.onrender.com/",
+            link: "https://github.com/ForkMeMaybe/Travify",
             description: [
                 "A Travel Form written in PHP",
             ],
-            domains: ["PHP", "PostgreSQL", "HTML", "CSS", "JavaScript-"]
+            domains: ["PHP", "PostgreSQL", "HTML", "CSS", "JavaScript"]
         },
         {
             name: "Dockerized Shop Sphere",
